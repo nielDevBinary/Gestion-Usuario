@@ -1,25 +1,43 @@
-# Laravel + Vue Starter Kit
+# Proyecto Laravel - Gestión de Usuarios
 
-## Introduction
+Este proyecto es una aplicación Laravel que gestiona usuarios, perfiles e historial de inicios de sesión.
 
-Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).
+## 🚀 Requisitos
 
-Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+- PHP 8.2
+- Composer
+- MySQL
+- Node.js
+- Laravel 12
 
-This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+## ⚙️ Instalación
 
-## Official Documentation
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo 
+```
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+2. **Ejecutar las migraciones**
+```bash
+php artisan migrate
+```
 
-## Contributing
-
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## License
-
-The Laravel + Vue starter kit is open-sourced software licensed under the MIT license.
+3. **Ejecucion de carga masiva de datos**
+```bash
+# Ejecuta la creación masiva de usuarios y perfiles.
+php artisan db:seed
+```
+```bash
+# Ejecuta la creación masiva registros ficticios de LoginHistory asociados a usuarios 
+php artisan generate:login-histories
+```
+4. **Ejecucion de cola de correos**
+```bash
+# Ejecuta 500 usuarios aleatorios y se encola
+php artisan usuarios:encolar-notificaciones
+```
+```bash
+# entrega de correos
+php artisan queue:work
+```
