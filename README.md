@@ -14,8 +14,8 @@ Este proyecto es una aplicación Laravel que gestiona usuarios, perfiles e histo
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo 
+git clone https://github.com/nielDevBinary/Gestion-Usuario.git
+cd Gestion-Usuario 
 ```
 
 2. **Ejecutar las migraciones**
